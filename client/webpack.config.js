@@ -20,6 +20,7 @@ module.exports = () => {
       new HtmlWebpackPlugin({
         template: './index.html',
         title: 'HTML Webpack Plugin',
+        //inject: true,
       }),
       // Injects our custom service worker
       new InjectManifest({
@@ -35,8 +36,8 @@ module.exports = () => {
         description: 'Take notes with JavaScript',
         background_color: '#225ca3',
         theme_color: '#225ca3',
-        start_url: './index.html',
-        publicPath: './',
+        start_url: '/',
+        publicPath: '/',
         icons: [
           {
             src: path.resolve('src/images/logo.png'),
@@ -54,6 +55,14 @@ module.exports = () => {
         {
           test: /\.css$/i,
           use: ['style-loader', 'css-loader'],
+        },
+        
+        {
+          test: /\.(png|jpeg|jpg|svg|gif|webp)$/i,
+          type: "asset/resource",
+          generator: {
+            filename: "images/[name].[hash][ext]",
+          },
         },
         //Add babel to webpack.
         {

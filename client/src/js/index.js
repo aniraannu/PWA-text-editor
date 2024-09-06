@@ -2,6 +2,8 @@ import { Workbox } from 'workbox-window';
 import Editor from './editor';
 import './database';
 import '../css/style.css';
+// import newlogo from '../images/logo.png';
+// document.querySelector('navbar-brand img').src = newlogo;
 
 const main = document.querySelector('#main');
 main.innerHTML = '';
