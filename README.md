@@ -1,144 +1,97 @@
 # 19 Progressive Web Applications (PWA): Text Editor
+J.A.T.E is a Progressive Web Application (PWA) that runs in the browser, offline and can be installed locally to your machine. This application features a number of data persistence techniques, insuring the application runs regardless of browser supported function. J.A.T.E uses an IndexedDB database and the idb package. This application is deployed to Heroku, to access it in production continue reading the documentation!
 
-## Your Task
+## Description
+The application is a web text editor where the user can create notes or code snippets with or without an internet connection and where the user can reliably retrieve them for later use. The integrated service worker and Cache API's ensure that the application will remain fully functional even without and active internet connection. This application allows the user to access visited pages even if the application is offline.
 
-As you have progressed through this course, you have put together a number of impressive projects that you can show off to potential employers. This project is no exception; in fact, it features some of the most impressive expressions of the concepts you have learned so far.
+The URL of the GitHub repository is https://github.com/aniraannu/PWA-text-editor and the repository name is PWA-text-editor
 
-Your task is to build a text editor that runs in the browser. The app will be a single-page application that meets the PWA criteria. Additionally, it will feature a number of data persistence techniques that serve as redundancy in case one of the options is not supported by the browser. The application will also function offline.
-
-To build this text editor, you will start with an existing application and implement methods for getting and storing data to an IndexedDB database. You will use a package called `idb`, which is a lightweight wrapper around the IndexedDB API. It features a number of methods that are useful for storing and retrieving data, and is used by companies like Google and Mozilla.
-
-You will deploy this full-stack application to Render using the [Render Deployment Guide on The Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/render/render-deployment-guide).
-
-**Important**: Make sure your submission includes the `.npmrc` file in this starter code.  This will ensure your application will deploy properly to Render.
-
-## User Story
-
-```md
-AS A developer
-I WANT to create notes or code snippets with or without an internet connection
-SO THAT I can reliably retrieve them for later use
-```
-
-## Acceptance Criteria
-
-```md
-GIVEN a text editor web application
-WHEN I open my application in my editor
-THEN I should see a client server folder structure
-WHEN I run `npm run start` from the root directory
-THEN I find that my application should start up the backend and serve the client
-WHEN I run the text editor application from my terminal
-THEN I find that my JavaScript files have been bundled using webpack
-WHEN I run my webpack plugins
-THEN I find that I have a generated HTML file, service worker, and a manifest file
-WHEN I use next-gen JavaScript in my application
-THEN I find that the text editor still functions in the browser without errors
-WHEN I open the text editor
-THEN I find that IndexedDB has immediately created a database storage
-WHEN I enter content and subsequently click off of the DOM window
-THEN I find that the content in the text editor has been saved with IndexedDB
-WHEN I reopen the text editor after closing it
-THEN I find that the content in the text editor has been retrieved from our IndexedDB
-WHEN I click on the Install button
-THEN I download my web application as an icon on my desktop
-WHEN I load my web application
-THEN I should have a registered service worker using workbox
-WHEN I register a service worker
-THEN I should have my static assets pre cached upon loading along with subsequent pages and static assets
-WHEN I deploy to Render
-THEN I should have proper build scripts for a webpack application
-```
-
-## Mock-Up
+🚀The application has been deployed to Render and the URL of the deployed application is:-
 
 The following animation demonstrates the application functionality:
 
-![Demonstration of the finished Module 19 Challenge being used in the browser and then installed.](./Assets/00-demo.gif)
-
+![Demonstration of the finished application being used in the browser and then installed.](./Assets/00-demo.gif).
 The following image shows the application's `manifest.json` file:
 
-![Demonstration of the finished Module 19 Challenge with a manifest file in the browser.](./Assets/01-manifest.png)
+![Demonstration of the finished application with a manifest file in the browser.](./Assets/01-manifest.png)
 
 The following image shows the application's registered service worker:
 
-![Demonstration of the finished Module 19 Challenge with a registered service worker in the browser.](./Assets/02-service-worker.png)
+![Demonstration of the finished application with a registered service worker in the browser.](./Assets/02-service-worker.png)
 
 The following image shows the application's IndexedDB storage:
 
-![Demonstration of the finished Module 19 Challenge with a IndexedDB storage named 'jate' in the browser.](./Assets/03-idb-storage.png)
+![Demonstration of the finished application with a IndexedDB storage named 'jate' in the browser.](./Assets/03-idb-storage.png)
 
-## Grading Requirements
+## Getting Started
+To run J.A.T.E locally:
 
-> **Note**: If a Challenge assignment submission is marked as “0”, it is considered incomplete and will not count towards your graduation requirements. Examples of incomplete submissions include the following:
->
-> * A repository that has no code
->
-> * A repository that includes a unique name but nothing else
->
-> * A repository that includes only a README file but nothing else
->
-> * A repository that only includes starter code
+* Pull down and/or branch this repository
+* Run npm i to install all dependencies
+* Invoke application with npm run start
+### Technologies Employed
 
-This Challenge is graded based on the following criteria:
+* Mini-CSS-Extract Plugin
+* Webpack+Workbox
+* Concurrently
+* JavaScript
+* IndexedDB
+* Express
+* NodeJS
+* Babel
 
-### Technical Acceptance Criteria: 40%
+### Installing
+* This text editor require a number of methods and store data to an IndexedDB database to be builded up.
 
-* Satisfies all of the above acceptance criteria plus the following:
+* This application will require the installation of Node.js and various npm packages.
 
-  * Uses IndexedDB to create an object store and includes both GET and PUT methods
+* Node Package Manager (npm) is a software manager and installer which puts the modules in place so that the node project can utilize it, and also, it manages dependency conflicts intelligently and initialized using npm init. The package.json will be generated and will contains all the details of the application in which the user have inputted during the npm initialization.
 
-  * The application works without an internet connection
+* This application will use the following npm packages:-
 
-  * Automatically saves content inside the text editor when the DOM window is unfocused
+  * npm install express (express.js)
+  * npm install --save-dev webpack (Webpack)
+  * npm install webpack-dev-server --save-dev (webpack-dev-server)
+  * npm install --save-dev webpack-pwa-manifest (WebpackPwaManifest)
+  * npm install babel (Babel)
+  * npm install --save-dev css-loader (CSS-loader)
+  * npm install concurrently --save (run multiple commands concurrently.) (Concurrently)
+  * npm npm install idb (IndexedDB)
 
-  * Bundled with webpack
+* The required modules are bundled in the package.json file and at CLI or integrated terminal type in npm run install, the modules will be installed.
 
-  * Create a service worker with workbox that Caches static assets
+### Executing program
 
-  * The application should use babel in order to use async / await
+* The application code can be cloned from the following Github link:
+[GitHub-PWA-test-editor](https://github.com/aniraannu/PWA-text-editor)
 
-  * Application must have a generated `manifest.json` using the `WebpackPwaManifest` plug-in
+* The application is deployed using Render and can be directly accesd from:
 
-  * Can be installed as a Progressive Web Application
 
-### Deployment: 32%
+## Help
 
-* Application deployed to Render at live URL with build scripts
+NA
 
-* Application loads with no errors
+## Authors
 
-* Application GitHub URL submitted
+Contributors names and contact info
 
-* GitHub repo contains application code
+Anira Raveendran
+[@aniraannu](https://github.com/aniraannu)
 
-### Application Quality: 15%
+## Version History
 
-* Application user experience is intuitive and easy to navigate
+* 0.1
+    * Initial Release
 
-* Application user interface style is clean and polished
+## License
 
-* Application resembles the mock-up functionality provided in the Challenge instructions
+None
 
-### Repository Quality: 13%
+## Acknowledgments
 
-* Repository has a unique name
+Inspiration, code snippets, etc.
 
-* Repository follows best practices for file structure and naming conventions
-
-* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
-
-* Repository contains multiple descriptive commit messages
-
-* Repository contains quality README file with description, screenshot, and link to deployed application
-
-## Review
-
-You are required to submit the following for review:
-
-* The URL of the deployed application
-
-* The URL of the GitHub repository, with a unique name and a README describing the project
-
-- - -
-© 2024 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
+* [dbader](https://github.com/dbader/readme-template)
+* [starter-code]
+* [deployment-guidlines](https://coding-boot-camp.github.io/full-stack/render/render-deployment-guide)
